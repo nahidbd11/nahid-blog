@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "my first blog",
+      "body": "lorem ishpum .... ",
+      "id": 1,
+      "author": "Nahid"
+    },
+    {
+      "title": "my second blog",
+      "body": "lorem ishpum .... ",
+      "id": 2,
+      "author": "sadika"
+    },
+    {
+      "title": "my third blog",
+      "body": "lorem ishpum .... ",
+      "id": 3,
+      "author": "Nahid"
+    }
+  ]
+}
