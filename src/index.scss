@@ -1,8 +1,5 @@
 $bg-clr: rgb(172, 54, 8);
 
-body {
-  // background-color: $bg-clr !important;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -13,4 +10,8 @@ code {
 //   color: yellow !important;
 // }
 
-
+.blog-list .blog-item {
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+}

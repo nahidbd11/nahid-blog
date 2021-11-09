@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light p-3">
+      <nav className="navbar navbar-expand-md navbar-light bg-light p-3">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             <h3 className="text-muted myclass">Nahid-blog</h3>

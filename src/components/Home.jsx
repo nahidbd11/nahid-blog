@@ -1,24 +1,29 @@
+import React, { useState, useEffect } from "react";
+import blogdata from "../data";
+import BlogLists from "./BlogLists";
 const Home = () => {
-  const handleClick = () => {
-    console.log("hello nahid");
-  };
-  const handleClickAgain = (name, e) => {
-    console.log(`hello ${name}`);
-  };
+  const [blogs, setBlogs] = useState(blogdata);
+  useEffect(() => {
+    console.log("running after initial render");
+  }, []);
+  function deleteBlogHandler(id) {
+    let newItems = blogs.filter((item) => item.id !== id);
+    setBlogs(newItems);
+  }
   return (
     <>
-      <h3>Home page</h3>
-      <button className="btn btn-primary" onClick={handleClick}>
-        click me
-      </button>
-      <button
-        className="ms-2 btn btn-warning"
-        onClick={(e) => {
-          handleClickAgain("puppy");
-        }}
-      >
-        click me again
-      </button>
+      <div className="blog-list">
+        <BlogLists
+          blogs={blogs}
+          title="All Blogs !!!"
+          deleteBlogHandler={deleteBlogHandler}
+        />
+        <BlogLists
+          blogs={blogs.filter((item) => item.author === "Nahid")}
+          title="Nahids Blogs !"
+          deleteBlogHandler={deleteBlogHandler}
+        />
+      </div>
     </>
   );
 };
