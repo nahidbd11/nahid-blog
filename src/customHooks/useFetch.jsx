@@ -32,7 +32,7 @@ const useFetch = (url) => {
     setTimeout(() => {
       fetchData(url);
       setIsPending(false);
-    }, 3000);
+    }, 1000);
 
     /*****FIXME: dont use setTimeout in real project .here i am using just for checking loading is working or not****** */
 

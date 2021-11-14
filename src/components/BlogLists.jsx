@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BlogLists = (props) => {
   const { blogs, title: bloglistTitle, deleteBlogHandler } = props;
   console.log(props);
@@ -11,17 +13,21 @@ const BlogLists = (props) => {
             className="container blog-item text-dark blog-preview bg-light m-2 p-4"
             key={id}
           >
-            <h3>{title}</h3>
-            <p className="opacity-50 text-dark blockquote-footer my-2">
-              written by{" "}
-              <cite className="fw-bold text-capitalize">{author}</cite>
-            </p>
+            <Link to={`/blog/${id}`} className="text-decoration-none">
+              <h3>{title}</h3>
+              <p className="opacity-50 text-dark blockquote-footer my-2">
+                written by
+                <cite className="fw-bold text-capitalize">{author}</cite>
+              </p>
+            </Link>
+
             <button
               className="btn btn-danger rounded"
               onClick={() => deleteBlogHandler(id)}
             >
               Delete blog
             </button>
+
           </div>
         );
       })}
