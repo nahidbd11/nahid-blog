@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import useFetch from "../customHooks/useFetch";
 import BlogLists from "./BlogLists";
 const Home = () => {
@@ -14,8 +14,10 @@ const Home = () => {
   return (
     <>
       <div className="blog-list">
-        {error && <h5 className="text-danger">{error}</h5>}
-        {isPending && <div className="text-warning">Loading ......</div>}
+        {error && <h1 className="text-danger">{error}</h1>}
+        {isPending && (
+          <div className="text-warning display-6">Loading ......</div>
+        )}
         {blogs && <BlogLists blogs={blogs} title="All Blogs !!!" />}
         {blogs && (
           <BlogLists

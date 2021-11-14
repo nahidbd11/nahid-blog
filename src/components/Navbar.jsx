@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
@@ -20,17 +22,31 @@ const Navbar = () => {
           <div className="collapse navbar-collapse text-center" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <NavLink
+                  to="/"
+                  className={(navinfo) =>
+                    navinfo.isActive ? "nav-link active" : "nav-link"
+                  }
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a
+                {/* <a
                   className="nav-link rounded-pill bg-info"
                   href="/create-blog"
                 >
                   New blog
-                </a>
+                </a> */}
+
+                <NavLink
+                  to="/about"
+                  className={(navinfo) =>
+                    navinfo.isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  about
+                </NavLink>
               </li>
             </ul>
           </div>
