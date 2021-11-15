@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BlogLists = (props) => {
-  const { blogs, title: bloglistTitle, deleteBlogHandler } = props;
+  const { blogs, title: bloglistTitle } = props;
   console.log(props);
   return (
     <div className="container my-5 blog-list">
@@ -20,14 +20,6 @@ const BlogLists = (props) => {
                 <cite className="fw-bold text-capitalize">{author}</cite>
               </p>
             </Link>
-
-            <button
-              className="btn btn-danger rounded"
-              onClick={() => deleteBlogHandler(id)}
-            >
-              Delete blog
-            </button>
-
           </div>
         );
       })}

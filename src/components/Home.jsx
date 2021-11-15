@@ -7,10 +7,7 @@ const Home = () => {
     isPending,
     error,
   } = useFetch("http://localhost:3004/blogs");
-  // function deleteBlogHandler(id) {
-  //   let newItems = blogs.filter((item) => item.id !== id);
-  //   setBlogs(newItems);
-  // }
+
   return (
     <>
       <div className="blog-list">
