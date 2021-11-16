@@ -14,7 +14,7 @@ const BlogLists = (props) => {
             key={id}
           >
             <Link to={`/blog/${id}`} className="text-decoration-none">
-              <h3>{title}</h3>
+              <h3 className="text-success">{title}</h3>
               <p className="opacity-50 text-dark blockquote-footer my-2">
                 written by
                 <cite className="fw-bold text-capitalize">{author}</cite>
